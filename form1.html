@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 20px auto;
+            background-color: black;
+            color: aliceblue;
+        }
+        input:required{
+            border: 2px solid rgb(51, 119, 44);
+        }
+        input:focus{
+            background-color: rgb(226, 218, 218);
+            color: rgb(81, 66, 28);
+            
+        }
+        span{
+            display: none;
+        }
+        input:hover+span{
+            display: inline;
+            background-color: turquoise;
+            color: rgb(166, 192, 71);
+            
+        }
+        input[type="radio"]:checked{
+            height: 16px;
+            width: 16px;
+
+        }
+        img{
+            display: none;
+            height: 15px;
+            width: 15px;
+            
+        }
+        input[type="email"]:valid~img[src="valid.png"]{
+            display: inline;  
+        }
+        input[type="email"]:invalid~img[src="invalid.jpg"]{
+            display: inline;  
+        }
+    </style>
+</head>
+<body>
+    <fieldset><legend>sign up form</legend>
+        <form action="">
+        <table>
+            <tr>
+                <td><label for="">Name:</label></td>
+                <td><input type="text" name="name" required placeholder="eg.Ganesh H P"><span>Enter the name</span></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label for="">College:</label></td>
+                <td><input type="text" disabled></td>
+            </tr>
+            <tr>
+                <td><label for="">Primary Email:</label></td>
+                <td><input type="email" name="pemail" required><span>Enter the primary email</span><img src="valid.png" alt=""><img src="invalid.jpg" alt=""></td>
+            </tr>
+            <tr>
+                <td><label for="">Secondary Email:</label></td>
+                <td><input type="email" name="email"><span>Enter the email</span><img src="valid.png" alt=""><img src="invalid.jpg" alt=""></td>
+            </tr>
+            <tr>
+                <td><label for="">Password:</label></td>
+                <td><input type="password" name="pwd" required><span>Enter the password</span></td>
+            </tr>
+            <tr>
+                <td><label for="">Gender:</label></td>
+                <td><input type="radio" name="gender" value="M" required>Male
+                    <input type="radio" name="gender" value="F" required>Female
+                    <input type="radio" name="gender" value="O" required>Others
+                </td>
+            </tr>
+            <tr>
+                <td><label for="">Age:</label></td>
+                <td><input type="number" size="5" name="num" min="18" ><span>Enter the age>18</span></td>
+            </tr>
+            <tr>
+                <td><label for="">Mode:</label></td>
+                <td><input type="text" value="Online" disabled></td>
+            </tr>
+            <tr><td><input type="submit"></td></tr>
+            
+        </table>
+    </form></fieldset>
+</body>
+</html>
